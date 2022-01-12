@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker Based AR Project</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  <!-- <script src="./makerEvents.js"></script> -->
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+  <a-scene vr-mode-ui="enabled: false;" embedded arjs="sourceType: webcam; 
+  sourceWidth:1280; sourceHeight:960; 
+  displayWidth: 1280; displayHeight: 960; 
+  debugUIEnabled: false;" >
+
+    <a-assets>
+
+      <img id="card1" src="./VR-AR-ProjectCards/css.png">
+      <img id="card2" src="./VR-AR-ProjectCards/html.png">
+      <img id="card3" src="./VR-AR-ProjectCards/js.png">
+      <img id="card4" src="./VR-AR-ProjectCards/py.png">
+
+    </a-assets>
+
+
+    <!-- CSS -->
+    <a-marker type="pattern" url="pattern-marker/css/pattern-css.patt">     
+      <a-plane src="#card1" position="0 0 -1" width="20" height="15" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+    <!-- HTML -->
+    <a-marker type="pattern" url="pattern-marker/html/pattern-html.patt">     
+      <a-plane src="#card2" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+    <!-- JS -->
+    <a-marker type="pattern" url="pattern-marker/js/pattern-js.patt">     
+      <a-plane src="#card3" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+    <!-- PY-->
+    <a-marker type="pattern" url="pattern-marker/py/pattern-py.patt">     
+      <a-plane src="#card4" position="0 0 -1" width="2" height="1.5" rotation="-90 0 0"></a-plane>
+    </a-marker>
+
+  </a-scene>
+</body>
+
+</html>
